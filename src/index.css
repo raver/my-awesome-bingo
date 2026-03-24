@@ -6,6 +6,14 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+
+  /* Coffee palette */
+  --color-coffee: #5c3317;
+  --color-latte: #a07850;
+  --color-espresso: #2c1a0e;
+  --color-cream: #fdf6e3;
+  --color-foam: #fdf0e0;
+  --color-caramel: #8b5e3c;
 }
 
 html,
