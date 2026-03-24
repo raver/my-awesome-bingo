@@ -6,6 +6,21 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+  --color-espresso: #2c1810;
+  --color-coffee: #5c3317;
+  --color-cream: #f5f0e8;
+  --color-latte: #c4a97d;
+  --color-foam: #faf6ef;
+  --font-heading: Georgia, 'Times New Roman', serif;
+}
+
+@keyframes posterReveal {
+  from { opacity: 0; transform: scaleY(0.97); }
+  to   { opacity: 1; transform: scaleY(1); }
+}
+@keyframes posterFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 html,
