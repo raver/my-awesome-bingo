@@ -6,6 +6,12 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+  --color-cream: #faf8f5;
+  --color-espresso: #2c1810;
+  --color-latte: #8b6f5e;
+  --color-coffee: #4a2c2a;
+  --color-caramel: #7c4a3a;
+  --font-heading: 'Playfair Display', Georgia, serif;
 }
 
 html,
@@ -18,4 +24,9 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
