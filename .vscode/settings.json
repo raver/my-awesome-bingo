@@ -23,6 +23,9 @@
   "remote.extensionKind": {
     "github.copilot": [
       "ui"
+    ],
+    "github.copilot-chat": [
+      "ui"
     ]
   }
 }

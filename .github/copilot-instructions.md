@@ -35,3 +35,32 @@
 - Contribution and workflow expectations: `CONTRIBUTING.md`
 - Tailwind v4 specifics: `.github/instructions/tailwind-4.instructions.md`
 - Workshop flow and exercises: `.lab/GUIDE.md`
+## Design Guide
+
+**Theme:** Cozy Coffee Shop — warm, inviting, café-menu aesthetic.
+
+### Color Palette (`src/index.css` `@theme`)
+| Token | Hex | Usage |
+|---|---|---|
+| `espresso` | `#2c1810` | Primary body text, dark headings |
+| `coffee` | `#5c3317` | Buttons, section headings, accents |
+| `caramel` | `#a0522d` | Hover/active states, secondary accents |
+| `latte` | `#c4956a` | Secondary text, borders, muted UI |
+| `cream` | `#fdf6e3` | Main page background |
+| `foam` | `#fff8f0` | Cards, panels, header bar |
+| `marked` | `#f5ddb3` | Checked bingo square fill (parchment) |
+| `marked-border` | `#c4956a` | Checked bingo square border |
+| `bingo` | `#d4a017` | Winning line highlight (warm gold) |
+
+### Typography
+- **Headings:** `font-heading` → Playfair Display (600/700), loaded via Google Fonts in `index.html`
+- **Body:** `font-body` → Lato (400/600), loaded via Google Fonts in `index.html`
+- Use `font-heading` on titles, card section headers, and the BingoModal "BINGO!" label.
+- Use `tracking-widest uppercase text-xs` for subtitles/labels (café-menu style).
+
+### Component Patterns
+- Cards/panels: `bg-foam rounded-2xl border border-latte/30 shadow-[0_4px_24px_rgba(92,51,23,0.08)]`
+- Primary buttons: `bg-coffee text-cream rounded-xl shadow-[0_4px_16px_rgba(92,51,23,0.25)] active:bg-caramel`
+- Board container: `bg-foam/60 rounded-2xl border border-latte/20 shadow-[0_4px_32px_rgba(92,51,23,0.12)]`
+- Free space square: inverted dark — `bg-coffee text-cream font-heading`
+- Page background: `bg-cream` or radial gradient `bg-[radial-gradient(ellipse_at_top,_#fff8f0_0%,_#fdf6e3_100%)]`

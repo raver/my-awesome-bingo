@@ -19,5 +19,20 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      // Flag unused variables; prefix with _ to opt-out intentionally.
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      // Async functions must contain at least one await.
+      'require-await': 'error',
+      // Disallow redundant `return await` in async functions.
+      'no-return-await': 'error',
+    },
   },
 ])
