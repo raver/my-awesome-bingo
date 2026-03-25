@@ -267,3 +267,4 @@ p.s. to stay up to date:
 1. [VS Code on YouTube](https://www.youtube.com/code)
 2. [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
 3. [Awesome Copilot](https://github.com/github/awesome-copilot) for more customizations
+4. Test
