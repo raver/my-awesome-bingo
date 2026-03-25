@@ -24,3 +24,18 @@ npm run build
 ```
 
 Deploys automatically to GitHub Pages on push to `main`.
+
+## Devcontainer: SSH remote auto-switch
+
+When the devcontainer starts it configures the HTTP(S) proxy and will attempt to switch the repository `origin` remote to the SSH URL so container-based git operations use your forwarded SSH agent. The switch only runs when:
+
+- the workspace is a git repository, and
+- an `origin` remote already exists.
+
+If you prefer to keep the HTTPS remote, either remove the `origin` remote inside the container before rebuild, or run the following inside the container to set your preferred remote manually:
+
+```bash
+git remote set-url origin git@github.com:raver/my-awesome-bingo.git
+```
+
+To apply devcontainer changes: Command Palette → "Dev Containers: Rebuild and Reopen in Container".

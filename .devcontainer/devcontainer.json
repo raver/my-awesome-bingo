@@ -1,6 +1,30 @@
 {
   "name": "Soc-Ops React TypeScript",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway"
+  ],
+  "containerEnv": {
+    "HTTP_PROXY": "http://host.docker.internal:7897",
+    "http_proxy": "http://host.docker.internal:7897",
+    "HTTPS_PROXY": "http://host.docker.internal:7897",
+    "https_proxy": "http://host.docker.internal:7897",
+    "NO_PROXY": "localhost,127.0.0.1,::1",
+    "no_proxy": "localhost,127.0.0.1,::1",
+    "SSH_AUTH_SOCK": "/ssh-agent.sock"
+  },
+  "mounts": [
+    "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "HTTP_PROXY": "http://host.docker.internal:7897",
+    "http_proxy": "http://host.docker.internal:7897",
+    "HTTPS_PROXY": "http://host.docker.internal:7897",
+    "https_proxy": "http://host.docker.internal:7897",
+    "NO_PROXY": "localhost,127.0.0.1,::1",
+    "no_proxy": "localhost,127.0.0.1,::1",
+    "SSH_AUTH_SOCK": "/ssh-agent.sock"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,6 +41,7 @@
     }
   },
   "postCreateCommand": "npm install",
+  "postStartCommand": "git config --global http.proxy http://host.docker.internal:7897 && git config --global https.proxy http://host.docker.internal:7897 && if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then if git remote get-url origin >/dev/null 2>&1; then git remote set-url origin git@github.com:raver/my-awesome-bingo.git && echo 'Switched origin to SSH'; else echo 'No origin remote found, skipping remote switch'; fi; else echo 'Not a git repository, skipping remote switch'; fi || true",
   "forwardPorts": [5173],
   "portsAttributes": {
     "5173": {
