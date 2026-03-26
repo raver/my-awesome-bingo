@@ -23,6 +23,22 @@ export const questions: string[] = [
   "collects something unique",
   "has read a book this month",
   "knows sign language",
+ 🎵 Music
+  "has listened to music today",
+  "has a song stuck in their head right now",
+  "has danced alone in the kitchen to music",
+  "has a go-to karaoke song",
+  "has attended a live concert",
+  "grew up listening to a different genre than they do now",
+  "uses music to hype up before something important",
+  "has played an instrument at some point in their life",
+  "can name an album they know front to back",
+  "has been to an outdoor music festival",
+  "has a song that instantly takes them back to a specific memory",
+  "has cried at a live performance",
+  "knows a song in a language they don't speak",
+  "can beatbox for 5 seconds right now",
+  "has introduced someone to a new artist or album",
 ];
 
 export const FREE_SPACE = "FREE SPACE";
